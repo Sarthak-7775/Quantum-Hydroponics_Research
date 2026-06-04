@@ -1,0 +1,38 @@
+# ════════════════════════════════════════════════════════════════
+# Hybrid Quantum-Classical Hydroponic Optimizer — Requirements
+# ════════════════════════════════════════════════════════════════
+#
+# Python ≥ 3.10 recommended  (tested on 3.10 and 3.11)
+#
+# Install:
+#   pip install -r requirements.txt
+#
+# For IBM Quantum real hardware (optional):
+#   pip install qiskit-ibm-runtime
+#   Set environment variables:
+#       IBMQ_TOKEN   = <your IBM Quantum API token>
+#       IBMQ_BACKEND = ibm_sherbrooke   (or any available backend)
+# ════════════════════════════════════════════════════════════════
+
+# ── Data Processing ───────────────────────────────────────────────
+numpy>=1.26,<2.0
+pandas>=2.2
+scikit-learn>=1.4
+
+# ── Deep Learning (Classical Perception) ─────────────────────────
+torch>=2.2                      # PyTorch — GRU model
+# torchvision and torchaudio not required for this project
+
+# ── Quantum Computing (Qiskit stack) ─────────────────────────────
+qiskit>=1.1                     # Core Qiskit SDK
+qiskit-aer>=0.14                # Local statevector / QASM simulator
+qiskit-algorithms>=0.3          # VQE, SPSA, MinimumEigensolverResult
+
+# ── IBM Quantum Real Hardware (optional — comment out if not needed) ──
+# qiskit-ibm-runtime>=0.20
+
+# ── Visualisation ─────────────────────────────────────────────────
+matplotlib>=3.8
+
+# ── Utilities ─────────────────────────────────────────────────────
+tqdm>=4.66                      # Progress bars (optional helper)
